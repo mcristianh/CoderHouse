@@ -1,0 +1,571 @@
+/*========== LINK - FONTS ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*========== RESET ==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    background: black;
+    padding: 20px;
+}
+
+.grid-container > * {
+    border-radius: 10px; /*LUEGO ELIMINAR ES EL CONTORNO*/
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header" 200px
+    "main"
+    "sidebar"
+    "footer";
+
+    /*========== HEADER - ESTILOS ==========*/
+    .header {
+        grid-area: header;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgb(0, 0, 0);
+        box-shadow: 10px 6px 37px -13px #f18930;
+        padding: 0px 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+    }
+    
+    .logo {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 700;
+        align-items: center;
+    }
+    
+    .navigation ul {
+        list-style: none;
+    }
+    
+    .header .navigation ul li {
+        float: left;
+        position: relative;
+    }
+    
+    .header .navigation ul li a {
+        font-size: 16px;
+        color: whitesmoke;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        transition:  all .2s ease;
+    }
+    
+    .header .navigation ul li a:hover {
+        background-color: black;
+        color: #f18930;
+    }
+    
+    .header .navigation ul li ul {
+        position: absolute;
+        right: 0;
+        width: 300px;
+        background-color: red;
+        background: transparent;
+        border: 1px solid #000000;
+        box-shadow:  0px 0px 0px #00daf7;
+        display: none;
+    }
+    
+    .header .navigation ul li ul li a {
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    
+    .header .navigation ul li ul li ul {
+        position: absolute;
+        top: 0;
+        right: 300px;
+    }
+    
+    .header .navigation ul li ul li {
+        width: 100%;
+    }
+    
+    .header .navigation ul li:hover > ul {
+        display: initial;
+    }
+    
+    .menu-hamburger img {
+        width: 50%;
+    }
+    
+    #toggle,
+    .header label {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .logo img {
+        width: 30%;
+        margin-top: 15px;
+    }
+
+    /*========== MAIN - ESTILOS ==========*/
+    main {
+        display: flex;
+    }
+
+    .main {
+        grid-area: main;
+    }
+    
+    .texto-container {
+        color: whitesmoke;
+        padding-top: 0px;
+        padding-left: 15px;
+    }
+    
+    .titulos {
+        font-size: 14px;
+        color: #f18930;
+        text-align: left;
+    }
+    
+    .titulos h1 {
+        margin-top: 10px;
+    }
+    
+    .titulos h2 {
+        margin-top: 10px;
+    }
+    
+    .parrafos {
+        margin-top: 15px;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .parrafos ul li{
+        list-style: none;
+    }
+    
+    .parrafos ul li i {
+        color: #03e203;
+    }
+    
+    .parrafos p {
+        margin-top: 10px;
+    }
+    
+    .parrafos p i {
+        color: #f18930;
+    }
+
+    /*========== MAIN - ESTILOS - SOPORTE TI ==========*/
+
+    .soporte-container {
+        margin-top: 35px;
+    }
+
+    .soporte-container .titulos h1 {
+        color: #f18930;
+        font-size: 25px;
+    }
+
+    .soporte-container .titulos h2 {
+        color: #f18930;
+        font-size: 25px;
+    }
+
+    .soporte-container .parrafos p {
+        color: whitesmoke;
+        font-size: 16px;
+    }
+
+    .soporte-container .parrafos ul li {
+        font-size: 16px;
+        color: whitesmoke;
+    }
+
+    .sidebar .img-ti {
+        width: 8 0%;
+    }
+
+    /*========== MAIN - ESTILOS - FORMULARIO CONTACTO ==========*/
+    .form-container {
+        color: whitesmoke;
+        padding-right: 15px;
+        text-align: left;
+    }
+    
+    .form-container .col-12 {
+        padding: 15px;
+    }
+    
+    .btn {
+        background-color: #f18930;
+        border-color: #f18930;
+    }
+    
+    .bta {
+        color: #f18930;
+    }
+    
+    .btn:hover {
+        background-color: black;
+        color: #f18930;
+    }
+
+    /*========== MAIN - ESTILOS - HOSTING ==========*/     
+    .card-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 1100px;
+        margin-left: 250px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 20px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0px 1px 20px rgb(0, 0, 0, 0.2);
+        cursor: default;
+        transition: all 400ms ease;
+        padding: 10px;
+    }
+
+    .card:hover {
+        box-shadow: 5px 5px 20px rgb(255, 0, 255);
+        transform: translateY(-3%);
+    }
+
+    .contenido-card h3 {
+        text-align: center;
+        color: #00daf7;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .contenido-card p {
+        color: #343434;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .contenido-card ul {
+        text-align: left;
+        justify-items: none;
+        font-weight: 600;
+    }
+
+    .contenido-card ul li {
+        color: #343434;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .contenido-card ul i {
+        color:#03e203;
+        font-size: 30px;
+    }
+
+    .contenido-card ul li span i {
+        color: #FFCD06;
+    }
+
+    .precio p {
+        margin-top: 20px;
+        color: #033dbb;
+        font-size: 16px;
+    }
+
+    .precio p span {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .info p {
+        color: #00daf7;
+        margin-top: 10px;
+        font-size: 16xp;
+    }
+
+    button {
+        background-color: #f18930;
+        border-color: #f18930;
+        color: white;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button i {
+        font-size: 20px;
+    }
+
+    /*========== MAIN - ESTILOS - DESARROLLO WEB ==========*/
+
+    .web-container {
+        background-color: white;
+        text-align: left;
+        padding: 20px;
+        border-radius: 6px;
+        color: #343434;
+    }
+
+    .contenido-web ul li span {
+        color: #0080EC;
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .contenido-web ul li {
+        color: #0080EC;
+        font-size: 16px;
+        list-style: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+    
+    /*========== SIDEBAR - ESTILOS ==========*/
+    .sidebar {
+        grid-area: sidebar;
+        background-color: black;
+        text-align: left;
+    }
+
+    .sidebar h1 {
+        color: #f18930;
+        margin-top: 15px;
+    }
+
+    .img {
+        margin-top: 50px;
+        float: right;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mapa {
+        margin-top: 30px;
+    }
+
+
+    /*========== FOOTER - ESTILOS ==========*/
+    footer {
+        grid-area: footer;
+        border-top: 1px solid #f18930;
+        border-radius: 0;
+        margin-top: 5px;
+
+    }
+    
+    .container {
+        width: auto;
+        /*width: 1140px;*/
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .contenido-footer {
+        width: 33.3%;
+    }
+    
+    h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: whitesmoke;
+        margin-top: 10px;
+    }
+    
+    .contenido-footer p {
+        width: 190px;
+        margin: auto;
+        padding: 7px;
+    }
+    
+    .contenido-footer ul{
+        text-align: center;
+    }
+    
+    .lista {
+        padding: 0;
+        color: #f18930;
+    }
+    
+    .lista li {
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 0 7px;
+        position: relative;
+    }
+    
+    .lista li a {
+        color: #f18930;
+        font-size: 14px;
+    }
+    
+    .lista li::before {
+        content:  '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: red;
+        transition-duration: .5s;
+    }
+    
+    .lista li:hover::before {
+        width: 70px;
+    }
+    
+    .contacto {
+        color: #f18930;
+        font-size: 14px;
+    }
+    
+    .contacto p i {
+        color: white;
+        font-size: 16px;
+    }
+    
+    .icono-social {
+        text-align: center;
+        padding: 0;
+    }
+    
+    .icono-social li {
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .icono-social i {
+        color: white;
+        font-size: 25px;
+    }
+    
+    .icono-social i:hover {
+        color: #f18930;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: #f18930;
+    }
+    
+    .copyright {
+        background: #f18930;
+        text-align: center;
+        padding: 5px 0;
+        margin-top: 15px;
+    }
+    
+    .copyright p {
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+    /*========== RESPONSIVO ==========*/
+    /*========== MODO TABLET ==========*/
+    @media (min-width: 768px) {
+        grid-template:
+        "header navbar" 50px
+        "header navbar" 50px
+        "sidebar main" auto
+        "footer footer" 100px;/
+        200px auto /*difine el ancho de las columnas*/
+    }
+
+    /*========== MODO DESKTOP ==========*/
+    @media (min-width: 992px) {
+        grid-template:
+        "header header header" 100px
+        "navbar main sidebar" auto
+        "footer footer footer" 100px;/
+        200px auto 200px /*difine el ancho de las columnas*/
+    }
+
+    /*========== MENÚ RESPONSIVO ==========*/
+    
+    @media(max-width: 950px) {
+        .header label {
+            display: initial;
+        }
+
+        .header {
+            padding: 20px 10%;
+        }
+
+        .header .navigation {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgb(255, 255, 255, 0.20 );
+            display: none;
+        }
+
+        .header .navigation ul li {
+            width: 100%;
+        }
+
+        .header .navigation ul li a {
+            padding: 8px 30px 8px 10%;
+        }
+
+        .header .navigation ul li ul {
+            position: relative;
+            width: 100%;
+            left: 0;
+        }
+
+        .header .navigation ul li ul li {
+            background-color: rgb(255, 255, 255, 0.20 );
+        }
+
+        .header .navigation ul li ul li ul {
+            position: relative;
+            width: 100%;
+            left: 0;
+        }
+
+        #toggle:checked ~ .navigation {
+            display: block;
+        }
+    }
+    
+}
