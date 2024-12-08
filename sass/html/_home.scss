@@ -1,0 +1,428 @@
+//VARIABLES
+@import "../utilidades/variables";
+//MIXIN
+@import "../utilidades/mixin";
+
+
+/*========== GRID ==========*/
+.grid-container > * {
+    @include grid-container-asterisco;
+}
+
+.grid-container {
+    @include grid-container;
+}
+
+/*========== HEADER ==========*/
+.header {
+    @include flex;
+}
+
+.logo {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $text-color-parrafos;
+    font-weight: 700;
+    align-items: center;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.header .navigation ul li {
+    float: left;
+    position: relative;
+    a {
+        font-size: 16px;
+        color: $text-color-parrafos;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        transition:  all .2s ease;
+        :hover {
+            background-color: $bg-color;
+            color: $text_color-titulos;
+        }
+    }
+    ul {
+        position: absolute;
+        right: 0;
+        width: 300px;
+        background-color: red;
+        background: transparent;
+        border: 1px solid #000000;
+        box-shadow:  0px 0px 0px #00daf7;
+        display: none;
+        li {
+            a {
+                font-size: 15px;
+                text-transform: capitalize;    
+            }
+            ul {
+                position: absolute;
+                top: 0;
+                right: 300px;    
+            }
+            width: 100%;
+        }
+    }
+    :hover > ul {
+        display: initial;    
+    }
+}
+
+.menu-hamburger img {
+    width: 50%;
+}
+
+#toggle,
+.header label {
+    display: none;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 30%;
+    margin-top: 15px;
+}
+
+/*========== MAIN ==========*/
+
+main {
+    @include main;
+}
+
+.main {
+    grid-area: main;    
+}
+
+.texto-container {
+    color: $text-color-parrafos;
+    padding-top: 0px;
+    padding-left: 15px;
+}
+
+.titulos {
+    font-size: 14px;
+    color: $text_color-titulos;
+    text-align: left;
+    h1, h2 {
+        margin-top: 10px;
+    }   
+}
+
+.parrafos {
+    margin-top: 15px;
+    align-items: center;
+    text-align: left;
+    ul li {
+        list-style: none;
+        i {
+            color: #03e203;    
+        }  
+    }
+    p {
+        margin-top: 10px;
+        i {
+            color: $text_color-titulos;
+        }    
+    }
+}
+
+/*========== MAIN - ESTILOS - SOPORTE TI ==========*/
+.soporte-container {
+    margin-top: 35px;
+    .titulos h1, .titulos h2 {
+        color: $text_color-titulos;
+        font-size: 25px;   
+    }
+    .parrafos {
+        p, ul li {
+            color: $text-color-parrafos;
+            font-size: 16px;
+        }
+    }
+}
+
+.sidebar .img-ti {
+    width: 8 0%;    
+}
+
+/*========== MAIN - ESTILOS - FORMULARIO CONTACTO ==========*/
+
+.form-container {
+    color: $text_color-parrafos;
+    padding-right: 15px;
+    text-align: left;
+    .col-12 {
+        padding: 15px;    
+    }   
+}
+
+.btn {
+    background-color: $bg-color-copy;
+    border-color: #f18930;    
+}
+
+.bta {
+    color: $text_color-titulos;
+    :hover {
+        background-color: $bg-color;
+        color: $text_color-titulos;    
+    }
+}
+
+/*========== MAIN - ESTILOS - HOSTING ==========*/  
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin-left: 250px;/*MARGEN HOSTING*/    
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: $bg-color-white;
+    box-shadow: 0px 1px 20px rgb(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    padding: 10px;
+    :hover {
+        box-shadow: 5px 5px 20px rgb(255, 0, 255);
+        transform: translateY(-3%);    
+    }
+}
+
+.contenido-card {
+    h3 {
+        text-align: center;
+        color: #00daf7;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    }
+    p {
+        color: #343434;
+        font-size: 16px;
+        justify-content: center;    
+    }
+    ul {
+        text-align: left;
+        justify-items: none;
+        font-weight: 600;
+        li {
+            color: #343434;
+            font-size: 16px;
+            align-items: center;
+            span i {
+                color: #FFCD06;    
+            }   
+        }
+        i {
+            color:#03e203;
+            font-size: 30px;    
+        }
+    }
+}
+
+.precio p {
+    margin-top: 20px;
+    color: #033dbb;
+    font-size: 16px;
+    span {
+        font-size: 30px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;    
+    }
+}
+
+.info p {
+    color: #00daf7;
+    margin-top: 10px;
+    font-size: 16xp;    
+}
+
+button {
+    background-color: $bg-color-copy;
+    border-color: #f18930;
+    color: $text_color-parrafos;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    i {
+        font-size: 20px;    
+    }
+}
+
+/*========== MAIN - ESTILOS - DESARROLLO WEB ==========*/
+.web-container {
+    background-color: white;
+    text-align: left;
+    padding: 20px;
+    border-radius: 6px;
+    color: #343434;    
+}
+
+.contenido-web {
+    ul li {
+        color: #0080EC;
+        font-size: 16px;
+        list-style: none;
+        span {
+            color: #0080EC;
+            font-size: 40px;
+            text-align: left;    
+        }
+    }
+}
+
+.title {
+    text-align: center;    
+}
+
+/*========== SIDEBAR - ESTILOS ==========*/
+.sidebar {
+    grid-area: sidebar;
+    background-color: $bg-color;
+    text-align: left;
+    h1 {
+        color: $text_color-titulos;
+        margin-top: 15px;    
+    }   
+}
+
+.img {
+    margin-top: 50px;
+    float: right;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.mapa {
+    margin-top: 30px;    
+}
+
+/*========== FOOTER - ESTILOS ==========*/
+footer {
+    grid-area: footer;
+    border-top: 1px solid #f18930;
+    border-radius: 0;
+    margin-top: 5px;    
+}
+
+.container {
+    width: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;    
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: $text_color-parrafos;
+    margin-top: 10px;    
+}
+
+.contenido-footer {
+    width: 33.3%;
+    p {
+        width: 190px;
+        margin: auto;
+        padding: 7px;    
+    }
+    ul {
+        text-align: center;    
+    } 
+}
+
+.lista {
+    padding: 0;
+    color: $text_color-titulos;
+    li {
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 0 7px;
+        position: relative;  
+        a {
+            color: $text_color-titulos;
+            font-size: 14px;    
+        }
+        ::before {
+            content:  '';
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: red;
+            transition-duration: .5s;    
+        }
+        :hover::before {
+            width: 70px;    
+        }
+    }  
+}
+
+.contacto {
+    color: $text_color-titulos;
+    font-size: 14px;
+    p i {
+        color: $text-color-parrafos;
+        font-size: 16px;    
+    }
+}
+
+.icono-social {
+    text-align: center;
+    padding: 0;
+    li {
+        display: inline-block;
+        text-align: center;
+        padding: 5px;    
+    }
+    i {
+        color: $text-color-parrafos;
+        font-size: 25px;
+        :hover {
+            color: $text_color-titulos;    
+        }   
+    }
+}
+
+a {
+    text-decoration: none;  
+    :hover {
+        color: $text_color-titulos;    
+    }  
+}
+
+.copyright {
+    background: $bg-color-copy;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 15px;  
+    p {
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;    
+    }  
+}
+
+//IMPORT MQ
+/*========== MEDIA QUERIES ==========*/
+@import "../utilidades/mq";
+//IMPORT MQ-HOST
+@import "../utilidades/mq-host";
+
+

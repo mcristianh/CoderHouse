@@ -1,0 +1,47 @@
+//VARIABLES
+@import "../utilidades/variables";
+//MIXIN
+@import "../utilidades/mixin";
+
+// RESPONSIVE
+//MENU
+@media(max-width: 600px) {
+    .header {
+        padding: 20px 10%;
+        label {
+            display: initial;    
+        }   
+    }
+    .header .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgb(255, 255, 255, 0.20 );
+        display: none;
+        ul li {
+            width: 100%;
+            a {
+                padding: 8px 30px 8px 10%;    
+            }
+            ul {
+                position: relative;
+                width: 100%;
+                left: 0;
+                li {
+                    background-color: rgb(255, 255, 255, 0.20 ); 
+                    ul {
+                        position: relative;
+                        width: 100%;
+                        left: 0;    
+                    }   
+                }    
+            }
+        }    
+    }
+    #toggle:checked ~ .navigation {
+        display: block;    
+    }    
+}
+
+

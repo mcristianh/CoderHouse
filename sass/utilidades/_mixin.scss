@@ -1,0 +1,35 @@
+@mixin flex {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0);
+    box-shadow: 10px 6px 37px -13px #f18930;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+@mixin grid-container-asterisco {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@mixin grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "header" 200px
+    "main"
+    "sidebar"
+    "footer";
+}
+
+@mixin main {
+    display: flex;
+}
