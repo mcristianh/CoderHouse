@@ -220,7 +220,7 @@ main {
   padding: 10px;
 }
 .card:hover {
-  box-shadow: 5px 5px 20px rgb(255, 0, 255);
+  /*box-shadow: 5px 5px 20px rgb(255, 0, 255);*/
   transform: translateY(-3%);
 }
 
