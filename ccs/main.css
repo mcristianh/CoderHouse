@@ -219,7 +219,7 @@ main {
   transition: all 400ms ease;
   padding: 10px;
 }
-.card :hover {
+.card:hover {
   box-shadow: 5px 5px 20px rgb(255, 0, 255);
   transform: translateY(-3%);
 }
